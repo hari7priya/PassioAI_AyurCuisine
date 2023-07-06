@@ -1,0 +1,213 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name PassioPlatformSDK
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import ARKit
+import AVFoundation
+import Accelerate
+import CommonCrypto
+import CoreML
+import CoreMedia
+import CoreMotion
+import Foundation
+import Metal
+import MetalPerformanceShaders
+import SQLite3
+import Swift
+import SwiftUI
+import UIKit
+import VideoToolbox
+import Vision
+import _Concurrency
+import _StringProcessing
+import simd
+public struct PassioMetadataService {
+  public var passioMetadata: PassioPlatformSDK.PassioMetadata? {
+    get
+  }
+  public var getModelNames: [Swift.String]? {
+    get
+  }
+  public var getlabelIcons: [PassioPlatformSDK.PassioID : PassioPlatformSDK.PassioID]? {
+    get
+  }
+  public func getPassioIDs(byModelName: Swift.String) -> [PassioPlatformSDK.PassioID]?
+  public func getLabel(passioID: PassioPlatformSDK.PassioID, languageCode: Swift.String = "en") -> Swift.String?
+  public init(metatadataURL: Foundation.URL? = nil)
+}
+public enum IconSize : Swift.String {
+  case px90, px180, px360
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension UIKit.UIImageView {
+  @_Concurrency.MainActor(unsafe) public func loadPassioIconBy(passioID: PassioPlatformSDK.PassioID, size: PassioPlatformSDK.IconSize = .px90, completion: @escaping (PassioPlatformSDK.PassioID, UIKit.UIImage) -> Swift.Void)
+}
+public struct PassioConfiguration : Swift.Equatable {
+  public var key: Swift.String
+  public var filesLocalURLs: [PassioPlatformSDK.FileLocalURL]?
+  public var overrideInstalledVersion: Swift.Bool
+  public var debugMode: Swift.Int
+  public var projectID: Swift.String?
+  public init(key: Swift.String)
+  public static func == (a: PassioPlatformSDK.PassioConfiguration, b: PassioPlatformSDK.PassioConfiguration) -> Swift.Bool
+}
+public struct PassioStatus {
+  public var mode: PassioPlatformSDK.PassioMode {
+    get
+  }
+  public var debugMessage: Swift.String? {
+    get
+  }
+  public var error: PassioPlatformSDK.PassioSDKError? {
+    get
+  }
+  public var activeModels: Swift.Int? {
+    get
+  }
+  public var projectID: Swift.String? {
+    get
+  }
+}
+public enum PassioMode {
+  case notReady, isBeingConfigured, isDownloadingModels, isReadyForDetection, failedToConfigure
+  public static func == (a: PassioPlatformSDK.PassioMode, b: PassioPlatformSDK.PassioMode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum PassioSDKError : Foundation.LocalizedError {
+  case canNotRunOnSimulator, keyNotValid, licensedKeyHasExpired, modelsNotValid, modelsDownloadFailed, noModelsFilesFound, noInternetConnection, notLicensedForThisProject
+  public var errorDescription: Swift.String? {
+    get
+  }
+  public static func == (a: PassioPlatformSDK.PassioSDKError, b: PassioPlatformSDK.PassioSDKError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol DetectionDelegate : AnyObject {
+  func detectionResult(candidates: [PassioPlatformSDK.DetectionCandidate]?, image: UIKit.UIImage?)
+}
+public protocol PassioStatusDelegate : AnyObject {
+  func passioStatusChanged(status: PassioPlatformSDK.PassioStatus)
+  func passioProcessing(filesLeft: Swift.Int)
+  func completedDownloadingAllFiles(filesLocalURLs: [PassioPlatformSDK.FileLocalURL])
+  func completedDownloadingFile(fileLocalURL: PassioPlatformSDK.FileLocalURL, filesLeft: Swift.Int)
+  func downloadingError(message: Swift.String)
+}
+public typealias PassioID = Swift.String
+public typealias FileName = Swift.String
+public typealias FileLocalURL = Foundation.URL
+public typealias ProjectID = Swift.String
+infix operator .+ : DefaultPrecedence
+infix operator ./ : DefaultPrecedence
+public protocol DetectionCandidate {
+  var label: Swift.String? { get }
+  var passioID: PassioPlatformSDK.PassioID { get }
+  var confidence: Swift.Double { get }
+  var boundingBox: CoreFoundation.CGRect? { get }
+  var croppedImage: UIKit.UIImage? { get }
+}
+@_hasMissingDesignatedInitializers public class PassioPlatformAISDK {
+  public class var shared: PassioPlatformSDK.PassioPlatformAISDK {
+    get
+  }
+  public var status: PassioPlatformSDK.PassioStatus {
+    get
+  }
+  weak public var statusDelegate: PassioPlatformSDK.PassioStatusDelegate?
+  public enum FramesPerSecond : Swift.Int32 {
+    case one
+    case two
+    case three
+    case four
+    public init?(rawValue: Swift.Int32)
+    public typealias RawValue = Swift.Int32
+    public var rawValue: Swift.Int32 {
+      get
+    }
+  }
+  @available(iOS 13.0, *)
+  public func configure(passioConfiguration: PassioPlatformSDK.PassioConfiguration, completion: @escaping (PassioPlatformSDK.PassioStatus) -> Swift.Void)
+  public func shutDownPassioSDK()
+  @available(iOS 13.0, *)
+  public func startDetection(detectionDelegate: PassioPlatformSDK.DetectionDelegate, completion: @escaping (Swift.Bool) -> Swift.Void)
+  public func stopDetection()
+  public func getPreviewLayer(frontCamera: Swift.Bool = false) -> AVFoundation.AVCaptureVideoPreviewLayer?
+  public func removeVidoeLayer()
+  public func transformCGRectForm(boundingBox: CoreFoundation.CGRect, toRect: CoreFoundation.CGRect) -> CoreFoundation.CGRect
+  public func fetchIconFor(passioID: PassioPlatformSDK.PassioID, size: PassioPlatformSDK.IconSize = IconSize.px90, completion: @escaping (UIKit.UIImage?) -> Swift.Void)
+  public var version: Swift.String {
+    get
+  }
+  @objc deinit
+}
+extension PassioPlatformSDK.PassioPlatformAISDK : PassioPlatformSDK.PassioStatusDelegate {
+  public func completedDownloadingAllFiles(filesLocalURLs: [PassioPlatformSDK.FileLocalURL])
+  public func completedDownloadingFile(fileLocalURL: PassioPlatformSDK.FileLocalURL, filesLeft: Swift.Int)
+  public func downloadingError(message: Swift.String)
+  public func passioStatusChanged(status: PassioPlatformSDK.PassioStatus)
+  public func passioProcessing(filesLeft: Swift.Int)
+}
+public struct PassioMetadata : Swift.Codable {
+  public let projectId: Swift.String
+  public let ensembleId: Swift.String?
+  public let ensembleVersion: Swift.Int?
+  public let architecture: PassioPlatformSDK.EnsembleArchitecture?
+  public var labelMetadata: [PassioPlatformSDK.PassioID : PassioPlatformSDK.LabelMetaData]? {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct EnsembleArchitecture : Swift.Codable {
+  public let name: Swift.String
+  public let structure: [PassioPlatformSDK.ArchitectureStructure]
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct ArchitectureStructure : Swift.Codable {
+  public let modelName: Swift.String?
+  public let modelId: Swift.String?
+  public let datasetId: Swift.String?
+  public let trainingRunId: Swift.String?
+  public let filename: PassioPlatformSDK.FileName?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct LabelMetaData : Swift.Codable {
+  public let displayName: Swift.String?
+  public let synonyms: [Swift.String : [PassioPlatformSDK.SynonymLang]]?
+  public let models: [Swift.String]?
+  public let labelId: Swift.String
+  public let description: Swift.String?
+  public var modelName: Swift.String? {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct SynonymLang : Swift.Codable {
+  public let synonym: Swift.String?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+extension simd.simd_float4x4 : Foundation.ContiguousBytes {
+  public func withUnsafeBytes<R>(_ body: (Swift.UnsafeRawBufferPointer) throws -> R) rethrows -> R
+}
+extension PassioPlatformSDK.IconSize : Swift.Equatable {}
+extension PassioPlatformSDK.IconSize : Swift.Hashable {}
+extension PassioPlatformSDK.IconSize : Swift.RawRepresentable {}
+extension PassioPlatformSDK.PassioMode : Swift.Equatable {}
+extension PassioPlatformSDK.PassioMode : Swift.Hashable {}
+extension PassioPlatformSDK.PassioSDKError : Swift.Equatable {}
+extension PassioPlatformSDK.PassioSDKError : Swift.Hashable {}
+extension PassioPlatformSDK.PassioPlatformAISDK.FramesPerSecond : Swift.Equatable {}
+extension PassioPlatformSDK.PassioPlatformAISDK.FramesPerSecond : Swift.Hashable {}
+extension PassioPlatformSDK.PassioPlatformAISDK.FramesPerSecond : Swift.RawRepresentable {}

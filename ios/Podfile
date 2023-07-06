@@ -43,11 +43,7 @@ target 'ayurcuisine' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
-  target 'ayurcuisineTests' do
-    inherit! :complete
-    # Pods for testing
-  end
-
+ 
   post_install do |installer|
     react_native_post_install(
       installer,

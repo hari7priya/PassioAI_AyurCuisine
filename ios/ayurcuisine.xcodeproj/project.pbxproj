@@ -7,33 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* ayurcuisineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ayurcuisineTests.m */; };
 		0C80B921A6F3F58F76C31292 /* libPods-ayurcuisine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-ayurcuisine.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		1F2A0E6629E920F1001C13BA /* PassioPlatformSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F2A0E6429E920F1001C13BA /* PassioPlatformSDK.xcframework */; };
 		1F2A0E6A29E96FF7001C13BA /* 559b0ec1_Classifier_stage-1_iOS_1.passiosecure in Resources */ = {isa = PBXBuildFile; fileRef = 1F2A0E6829E96FF7001C13BA /* 559b0ec1_Classifier_stage-1_iOS_1.passiosecure */; };
 		1F2A0E6B29E96FF7001C13BA /* 559b0ec1_passiometadata_iOS_1.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F2A0E6929E96FF7001C13BA /* 559b0ec1_passiometadata_iOS_1.json */; };
-		1F2A0E6C29E9703D001C13BA /* PassioPlatformSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F2A0E6429E920F1001C13BA /* PassioPlatformSDK.xcframework */; };
-		1F2A0E6D29E9703D001C13BA /* PassioPlatformSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F2A0E6429E920F1001C13BA /* PassioPlatformSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1F2A0E7129E970C1001C13BA /* PassioPlatformSDKBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2A0E7029E970C1001C13BA /* PassioPlatformSDKBridge.swift */; };
 		1F2A0E7329E9714E001C13BA /* PassioPlatformSDKBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2A0E7229E9714E001C13BA /* PassioPlatformSDKBridge.m */; };
 		1F2A0E7629E994E8001C13BA /* PassioCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2A0E7429E994E8001C13BA /* PassioCameraView.swift */; };
 		1F2A0E7729E994E8001C13BA /* PassioCameraViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2A0E7529E994E8001C13BA /* PassioCameraViewManager.m */; };
-		7699B88040F8A987B510C191 /* libPods-ayurcuisine-ayurcuisineTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-ayurcuisine-ayurcuisineTests.a */; };
+		4FF5CD642A4AAAF0000E64FE /* PassioPlatformSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FF5CD612A4AA80F000E64FE /* PassioPlatformSDK.xcframework */; };
+		4FF5CD652A4AAAF0000E64FE /* PassioPlatformSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4FF5CD612A4AA80F000E64FE /* PassioPlatformSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = ayurcuisine;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		1F2A0E6E29E9703D001C13BA /* Embed Frameworks */ = {
@@ -42,7 +29,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1F2A0E6D29E9703D001C13BA /* PassioPlatformSDK.xcframework in Embed Frameworks */,
+				4FF5CD652A4AAAF0000E64FE /* PassioPlatformSDK.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,7 +37,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* ayurcuisineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ayurcuisineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* ayurcuisineTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ayurcuisineTests.m; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* ayurcuisine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ayurcuisine.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,8 +45,6 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ayurcuisine/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ayurcuisine/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ayurcuisine/main.m; sourceTree = "<group>"; };
-		19F6CBCC0A4E27FBF8BF4A61 /* libPods-ayurcuisine-ayurcuisineTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ayurcuisine-ayurcuisineTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1F2A0E6429E920F1001C13BA /* PassioPlatformSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PassioPlatformSDK.xcframework; path = "../../passsio/passio-platform-sdk-ios-latest/PlatformSDKDemoApp/PassioPlatformSDK.xcframework"; sourceTree = "<group>"; };
 		1F2A0E6829E96FF7001C13BA /* 559b0ec1_Classifier_stage-1_iOS_1.passiosecure */ = {isa = PBXFileReference; lastKnownFileType = file; path = "559b0ec1_Classifier_stage-1_iOS_1.passiosecure"; sourceTree = "<group>"; };
 		1F2A0E6929E96FF7001C13BA /* 559b0ec1_passiometadata_iOS_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 559b0ec1_passiometadata_iOS_1.json; sourceTree = "<group>"; };
 		1F2A0E6F29E970C0001C13BA /* ayurcuisine-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ayurcuisine-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -69,6 +53,7 @@
 		1F2A0E7429E994E8001C13BA /* PassioCameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassioCameraView.swift; sourceTree = "<group>"; };
 		1F2A0E7529E994E8001C13BA /* PassioCameraViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassioCameraViewManager.m; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-ayurcuisine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ayurcuisine.debug.xcconfig"; path = "Target Support Files/Pods-ayurcuisine/Pods-ayurcuisine.debug.xcconfig"; sourceTree = "<group>"; };
+		4FF5CD612A4AA80F000E64FE /* PassioPlatformSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PassioPlatformSDK.xcframework; path = "../../../Downloads/passio-platform-sdk-ios-latest 2/PlatformSDKDemoApp/PassioPlatformSDK.xcframework"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-ayurcuisine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ayurcuisine.release.xcconfig"; path = "Target Support Files/Pods-ayurcuisine/Pods-ayurcuisine.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-ayurcuisine-ayurcuisineTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ayurcuisine-ayurcuisineTests.debug.xcconfig"; path = "Target Support Files/Pods-ayurcuisine-ayurcuisineTests/Pods-ayurcuisine-ayurcuisineTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-ayurcuisine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ayurcuisine.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,20 +63,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		00E356EB1AD99517003FC87E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1F2A0E6629E920F1001C13BA /* PassioPlatformSDK.xcframework in Frameworks */,
-				7699B88040F8A987B510C191 /* libPods-ayurcuisine-ayurcuisineTests.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F2A0E6C29E9703D001C13BA /* PassioPlatformSDK.xcframework in Frameworks */,
+				4FF5CD642A4AAAF0000E64FE /* PassioPlatformSDK.xcframework in Frameworks */,
 				0C80B921A6F3F58F76C31292 /* libPods-ayurcuisine.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,10 +122,9 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1F2A0E6429E920F1001C13BA /* PassioPlatformSDK.xcframework */,
+				4FF5CD612A4AA80F000E64FE /* PassioPlatformSDK.xcframework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				5DCACB8F33CDC322A6C60F78 /* libPods-ayurcuisine.a */,
-				19F6CBCC0A4E27FBF8BF4A61 /* libPods-ayurcuisine-ayurcuisineTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -181,7 +156,6 @@
 			isa = PBXGroup;
 			children = (
 				13B07F961A680F5B00A75B9A /* ayurcuisine.app */,
-				00E356EE1AD99517003FC87E /* ayurcuisineTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -200,27 +174,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* ayurcuisineTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ayurcuisineTests" */;
-			buildPhases = (
-				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
-				00E356EA1AD99517003FC87E /* Sources */,
-				00E356EB1AD99517003FC87E /* Frameworks */,
-				00E356EC1AD99517003FC87E /* Resources */,
-				C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */,
-				F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				00E356F51AD99517003FC87E /* PBXTargetDependency */,
-			);
-			name = ayurcuisineTests;
-			productName = ayurcuisineTests;
-			productReference = 00E356EE1AD99517003FC87E /* ayurcuisineTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		13B07F861A680F5B00A75B9A /* ayurcuisine */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ayurcuisine" */;
@@ -252,10 +205,6 @@
 			attributes = {
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
-					00E356ED1AD99517003FC87E = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = 13B07F861A680F5B00A75B9A;
-					};
 					13B07F861A680F5B00A75B9A = {
 						LastSwiftMigration = 1430;
 					};
@@ -275,19 +224,11 @@
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* ayurcuisine */,
-				00E356ED1AD99517003FC87E /* ayurcuisineTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		00E356EC1AD99517003FC87E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F8E1A680F5B00A75B9A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -335,28 +276,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ayurcuisine/Pods-ayurcuisine-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ayurcuisine-ayurcuisineTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -379,23 +298,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ayurcuisine-ayurcuisineTests/Pods-ayurcuisine-ayurcuisineTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ayurcuisine-ayurcuisineTests/Pods-ayurcuisine-ayurcuisineTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ayurcuisine-ayurcuisineTests/Pods-ayurcuisine-ayurcuisineTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -411,23 +313,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ayurcuisine/Pods-ayurcuisine-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ayurcuisine-ayurcuisineTests/Pods-ayurcuisine-ayurcuisineTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ayurcuisine-ayurcuisineTests/Pods-ayurcuisine-ayurcuisineTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ayurcuisine-ayurcuisineTests/Pods-ayurcuisine-ayurcuisineTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -452,14 +337,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		00E356EA1AD99517003FC87E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				00E356F31AD99517003FC87E /* ayurcuisineTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F871A680F5B00A75B9A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -475,68 +352,7 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* ayurcuisine */;
-			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		00E356F61AD99517003FC87E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-ayurcuisine-ayurcuisineTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ayurcuisineTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
-					"$(inherited)",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ayurcuisine.app/ayurcuisine";
-			};
-			name = Debug;
-		};
-		00E356F71AD99517003FC87E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-ayurcuisine-ayurcuisineTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = ayurcuisineTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
-					"$(inherited)",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ayurcuisine.app/ayurcuisine";
-			};
-			name = Release;
-		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-ayurcuisine.debug.xcconfig */;
@@ -741,15 +557,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ayurcuisineTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				00E356F61AD99517003FC87E /* Debug */,
-				00E356F71AD99517003FC87E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ayurcuisine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

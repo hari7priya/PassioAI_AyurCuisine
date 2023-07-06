@@ -38,16 +38,28 @@ function App(): JSX.Element {
         <Stack.Screen
           name="Home"
           component={HomeScreen}
-          options={{title: 'Ayur Cuisine'}}
+          options={{
+            title: 'AyurCuisine',
+            headerTintColor: 'white',
+            headerStyle: {backgroundColor: 'green'},
+          }}
         />
         <Stack.Screen
           name="Camera"
           component={CameraNativeScreen}
-          options={{title: 'Recipe Detection'}}
+          options={{
+            title: 'Recipe Detection',
+            headerTintColor: 'white',
+            headerStyle: {backgroundColor: 'green'},
+          }}
         />
         <Stack.Screen
           name="Cuisine"
-          options={{title: 'Kudos to Ayurveda'}}
+          options={{
+            title: 'Kudos to Ayurveda',
+            headerTintColor: 'white',
+            headerStyle: {backgroundColor: 'green'},
+          }}
           component={CuisineNavigator}
         />
       </Stack.Navigator>

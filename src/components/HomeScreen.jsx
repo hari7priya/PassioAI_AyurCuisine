@@ -5,6 +5,7 @@ import {
   StyleSheet,
   TouchableOpacity,
   Text,
+  Dimensions,
 } from 'react-native';
 
 export const HomeScreen = ({navigation}) => {
@@ -15,14 +16,14 @@ export const HomeScreen = ({navigation}) => {
       <View style={styles.controlsContainer}>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => navigation.navigate('Camera')}>
+          onPress={() => navigation.navigate('Camera', {recipe: 'vada'})}>
           <Text style={styles.buttonText}>Scan your dish</Text>
         </TouchableOpacity>
       </View>
     </ImageBackground>
   );
 };
-
+/*Camera*/
 const styles = StyleSheet.create({
   controlsContainer: {
     flexDirection: 'row',
@@ -30,9 +31,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     padding: 20,
     width: '100%',
+    alignContent: 'center',
   },
   button: {
-    backgroundColor: 'white',
+    backgroundColor: 'green',
     borderRadius: 50,
     paddingVertical: 15,
     paddingHorizontal: 25,
@@ -40,8 +42,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   buttonText: {
+    color: 'white',
     fontWeight: 'bold',
-    fontSize: 18,
+    fontSize: 20,
   },
   message: {
     fontWeight: 'bold',

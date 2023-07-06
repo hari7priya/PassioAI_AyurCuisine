@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import {
-  Button,
   NativeEventEmitter,
   NativeModules,
   requireNativeComponent,
@@ -20,8 +19,8 @@ export const CameraNativeScreen = ({navigation}) => {
   const [prevCandidate, setPrevCandidate] = useState('');
   useEffect(() => {
     PassioSDK.configure(
-      '2o1No6sYGZpnwzOjJn8uMj3pkRwW2QR4oizx8GFW0C5L', // your license key here
-      '559b0ec1-d892-11ed-8d61-d257af01c9c1', // your projectID here
+      '2o1No6sYGZpnwzOjJn8uMj3pkRwW2QR4oizx8GFW0C5L', //  license key
+      '559b0ec1-d892-11ed-8d61-d257af01c9c1', //  projectID
       1, // set debugMode here
       true, // set autoUpdate as true
     ).then(result => {
@@ -56,24 +55,9 @@ export const CameraNativeScreen = ({navigation}) => {
               onPress={() => {
                 if (!isDetecting) {
                   PassioSDK.startDetection();
-                  var _myInterval = setInterval(function () {
-                    if (prevCandidate == candidate) {
-                      //if detected value remains same for 5 seconds then redirect to cuisine details page
-                      // console.warn(candidate);
-
-                      navigation.navigate('Cuisine', {recipe: prevCandidate});
-                    } else {
-                      console.warn(
-                        'Value was changed between past 2 second prev: ',
-                        prevCandidate,
-                        ' New: ',
-                        candidate,
-                      );
-                      setPrevCandidate(candidate);
-                    }
-                  }, 5000);
                 } else {
                   PassioSDK.stopDetection();
+                  navigation.navigate('Cuisine', {recipe: candidate});
                   setCandidate('');
                 }
                 setIsDetecting(!isDetecting);
@@ -81,7 +65,9 @@ export const CameraNativeScreen = ({navigation}) => {
               <Text style={styles.text}>{!isDetecting ? 'Start' : 'Stop'}</Text>
             </Pressable>
 
-            <Text>{`Candidate: ${candidate}`}</Text>
+            <View style={{backgroundColor: 'white', padding: 20}}>
+              <Text>{`Candidate: ${candidate}`}</Text>
+            </View>
           </View>
         </>
       ) : (
